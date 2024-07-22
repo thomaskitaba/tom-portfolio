@@ -283,6 +283,7 @@ input:focus, textarea:focus, select:focus {
 	main .container {
 		max-width: 100%;
 		padding: 0 150px;
+
 	}
 }
 
@@ -1092,6 +1093,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   list-style: none;
 }
 
+.we-list-container {
+  min-width:  400px;
+}
 .we-list {
   /* border-radius: 50%; */
   display: flex;
@@ -1109,6 +1113,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   padding: 10px;
   height: 400px;
 }
+
 .banner li {
   line-height: 1.2;
   border-bottom: 1px solid grey;
@@ -1129,10 +1134,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   line-height: 1.5em;
   width: 96%;
 }
-.moto {
-  color: var(--clr-txt-verydark);
-  font-size: 5rem;
-}
+/*  */
 
 .banner button {
   color: #fff;
@@ -1179,6 +1181,17 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   font-size: 1.5rem;
   color: white;
 }
+
+
+@media (min-width: 767px) {
+  .we-list-container {
+    padding: 0;
+    margin-right: 0;
+  }
+  .we-list {
+    margin: 10px;
+  }
+}
 /*************Service content *******************/
 .service-container{
   display: flex;
@@ -1189,8 +1202,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   background: #0f0c29;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
-  background-size: cover;
-  background-repeat: no-repeat;
+  /* background-size: cover;
+  background-repeat: no-repeat; */
 }
 .service-container-inner {
   /* background-color: #abc3ff; */
@@ -1310,12 +1323,12 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   visibility: visible; /* Make the element visible when it has the 'visible' class
 } */
 
-.curriculum-design-images{
+-images{
   /* background-image: url(../src/assets/icons/blueprints.png); */
   background-image: url(../src/assets/img/consultancy-images/curriculum-design.jpg);
   transition: all 0.5s;
   /* border-right: 6px solid var(--clr-book-green);
-  border-left: 6px solid var(--clr-book-green); */
+  border-l.curriculum-designeft: 6px solid var(--clr-book-green); */
   outline: var(--border-size) var(--border-style) var(--clr-book-green);
 }
 .finish-curriculum-images {
@@ -1569,14 +1582,14 @@ background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996); /* W3
   align-self: center;
 
 }
-.curriculum-design {
+/* .curriculum-design {
   background-image: url(../src/assets/img/consultancy-images/curriculum-design-2.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 
-}
-.finish-curriculum {
+} */
+/* .finish-curriculum {
   background-image: url(../src/assets/img/consultancy-images/accelarated-learning-2.jpg
 
   );
@@ -1584,7 +1597,7 @@ background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996); /* W3
   background-position: center;
   background-repeat: no-repeat;
 
-}
+} */
 .eary-child-development {
   background-image: url(../src/assets/img/consultancy-images/early-child-development-2.webp);
   background-size: cover;
@@ -1965,6 +1978,7 @@ background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996); /* W3
   background-color: #4e8bff; /* Fallback color */
   background-image: linear-gradient(to bottom, #4e8bff, #2563eb);
   color: white;
+  box-shadow: 2px 2px 4px rgba(39, 39, 39, 0.5), -2px -2px 4px rgba(39, 39, 39, 0.5);
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
@@ -1975,11 +1989,15 @@ background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996); /* W3
   text-transform: uppercase;
   transition: background-color 0.3s ease;
   margin: 0 auto;
+  margin-bottom: 10px;
+  align-self: center;
 }
 
 .subscribe-button:hover {
   background-color: White;
   background-image: linear-gradient(to bottom, #2563eb, #4e8bff);
+  box-shadow: 3px 4px 8px rgba(0, 0, 255, 0.7), -3px -2px 4px rgba(0, 0, 255, 0.7);
+  /* filter: drop-shadow(-0.2rem -0.2rem 0.5rem rgba(236, 181, 78, 1)); */
 }
 
 .save-2 {
@@ -1996,9 +2014,7 @@ background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996); /* W3
   filter: drop-shadow(-1px -1px 1px black);
 }
 
-
 @media (max-width: 767px) {
-
 .toggle-contribute {
   display: flex;
   flex-direction: column-reverse;
@@ -3237,6 +3253,7 @@ margin-top: 20px;
   display: flex;
   flex-direction:column;
   box-shadow: 1px 1px 3px black;
+  background-color: white;
 }
 .contact-paragraph-list {
 
@@ -3348,6 +3365,7 @@ margin-top: 20px;
   }
 
 }
+
 /************* GOOGLE.com **********/
 .google-container {
   z-index: 99;
