@@ -23,11 +23,11 @@ const Slider = ({SliderJson}) => {
     });
   }, []);
   return (
-
+ 
     <>
     <div className="slide-container-all">
       <div className="slider-title">
-          <div id="slider-title">Sample Works</div>
+          <div id="slider-title">Services</div>
       </div>
       <div className="slider-container">
         <div className="swiper-container">

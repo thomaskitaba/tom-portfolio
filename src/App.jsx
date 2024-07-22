@@ -21,6 +21,7 @@ import Loading from './components/Loading';
 import Button from './components/Button';
 import Slider from './components/Slider';
 import SliderJson from './components/SliderJson';
+import Myworks from './components/Myworks';
 import Texture from './components/Texture';
 import Busy from './components/Busy';
 import Keepalive from './components/Keepalive';
@@ -47,10 +48,10 @@ function App() {
         <NavBar />
         <Keepalive />
         <Button />
-        {/* <div className="wrapper"> */}
-          <Banner />
-        {/* </div> */}
-          <Slider SliderJson={SliderJson} />
+        <Banner />
+        <Slider SliderJson={SliderJson} />
+        {/* <Myworks /> */}
+        {/* <Services/> */}
         <Postsaccordion />
         <Contact />
         <Googlemap />
