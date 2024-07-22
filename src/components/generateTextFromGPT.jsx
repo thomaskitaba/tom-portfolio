@@ -67,7 +67,7 @@ prompt = `list of famous social media sites`;
     alert(JSON.stringify(response.data));
     return (
       <div style={{width: '500px', height: '500px', backgroundColor: 'red' }}>
-     <div> ${esponse.data.choices[0].text.trim()} </div>
+     <div> ${response.data.choices[0].text.trim()} </div>
      </div>
     )
   } catch (error) {

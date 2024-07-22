@@ -283,6 +283,7 @@ input:focus, textarea:focus, select:focus {
 	main .container {
 		max-width: 100%;
 		padding: 0 150px;
+
 	}
 }
 
@@ -1092,6 +1093,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   list-style: none;
 }
 
+.we-list-container {
+  min-width:  400px;
+}
 .we-list {
   /* border-radius: 50%; */
   display: flex;
@@ -1109,6 +1113,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   padding: 10px;
   height: 400px;
 }
+
 .banner li {
   line-height: 1.2;
   border-bottom: 1px solid grey;
@@ -1129,10 +1134,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   line-height: 1.5em;
   width: 96%;
 }
-.moto {
-  color: var(--clr-txt-verydark);
-  font-size: 5rem;
-}
+/*  */
 
 .banner button {
   color: #fff;
@@ -1178,6 +1180,19 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .moto {
   font-size: 1.5rem;
   color: white;
+}
+
+
+@media (min-width: 767px) {
+  .we-list-container {
+    padding: 0;
+    border: 2px red solid;
+    margin-right: 0;
+  }
+  .we-list {
+    border: 2px green solid;
+    margin: 10px;
+  }
 }
 /*************Service content *******************/
 .service-container{
@@ -1965,6 +1980,7 @@ background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996); /* W3
   background-color: #4e8bff; /* Fallback color */
   background-image: linear-gradient(to bottom, #4e8bff, #2563eb);
   color: white;
+  box-shadow: 2px 2px 4px rgba(39, 39, 39, 0.5), -2px -2px 4px rgba(39, 39, 39, 0.5);
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
@@ -1975,11 +1991,14 @@ background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996); /* W3
   text-transform: uppercase;
   transition: background-color 0.3s ease;
   margin: 0 auto;
+  margin-bottom: 10px;
+  align-self: center;
 }
 
 .subscribe-button:hover {
   background-color: White;
   background-image: linear-gradient(to bottom, #2563eb, #4e8bff);
+  box-shadow: 2px 3px 4px rgb(39, 39, 39), -2px -2px 4px rgb(39, 39, 39);
 }
 
 .save-2 {
@@ -1996,9 +2015,7 @@ background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996); /* W3
   filter: drop-shadow(-1px -1px 1px black);
 }
 
-
 @media (max-width: 767px) {
-
 .toggle-contribute {
   display: flex;
   flex-direction: column-reverse;

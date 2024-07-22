@@ -28,16 +28,14 @@ export const Banner = () => {
             <Col xs={12} md={6} xl={7} className='we-list-container'>
               <div className='we-list'>
               <h1>
-               <div className="banner-list-title">Professional Services</div>
+               <div style={{fontSize: "2rem", textDecoration: "underline", marginBottom: "2rem"}}>Professional Services</div>
 
                 {/* <span className="wrap"> */}
                 <ul className='moto'>
 
-                  {/* <li>Empower Educators and Transform Schools</li>
-                  <li>Build Bridges to Educational Equity</li>
-                  <li>Unlock Every learners Potential</li> */}
+                   <li>Design Engaging and Interactive Websites</li>
                   <li>Create Visually Captivating Graphics</li>
-                  <li>Design Engaging and Interactive Websites</li>
+
                   <li>Develop and Execute Comprehensive Digital Marketing Strategies</li>
                 </ul>
               {/* </span> */}
@@ -49,7 +47,7 @@ export const Banner = () => {
             </Col>
           </Row>
           {!subscriber ?
-          <div className="subscribe-button" onClick={(e)=> setSubscribe(true)}> Join Our Community: Subscribe to Our Newsletter </div>
+          <div className="subscribe-button" onClick={(e)=> setSubscribe(true)}> Join My Community: Subscribe to My Blogs </div>
           : null
 }
           <Row>
