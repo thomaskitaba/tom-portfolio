@@ -5,6 +5,6 @@ import dotenv from 'dotenv';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base:'/tom-blog-post/',
+  base:'/tom-portfolio/',
   plugins: [react()],
 })
