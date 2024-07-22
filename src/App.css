@@ -1186,11 +1186,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 @media (min-width: 767px) {
   .we-list-container {
     padding: 0;
-    border: 2px red solid;
     margin-right: 0;
   }
   .we-list {
-    border: 2px green solid;
     margin: 10px;
   }
 }
@@ -1998,7 +1996,8 @@ background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996); /* W3
 .subscribe-button:hover {
   background-color: White;
   background-image: linear-gradient(to bottom, #2563eb, #4e8bff);
-  box-shadow: 2px 3px 4px rgb(39, 39, 39), -2px -2px 4px rgb(39, 39, 39);
+  box-shadow: 3px 4px 8px rgba(0, 0, 255, 0.7), -3px -2px 4px rgba(0, 0, 255, 0.7);
+  /* filter: drop-shadow(-0.2rem -0.2rem 0.5rem rgba(236, 181, 78, 1)); */
 }
 
 .save-2 {
@@ -3254,6 +3253,7 @@ margin-top: 20px;
   display: flex;
   flex-direction:column;
   box-shadow: 1px 1px 3px black;
+  background-color: white;
 }
 .contact-paragraph-list {
 
@@ -3365,6 +3365,7 @@ margin-top: 20px;
   }
 
 }
+
 /************* GOOGLE.com **********/
 .google-container {
   z-index: 99;
