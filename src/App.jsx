@@ -50,7 +50,7 @@ function App() {
         <Button />
         <Banner />
         <Slider SliderJson={SliderJson} />
-        {/* <Myworks /> */}
+        <Myworks />
         {/* <Services/> */}
         <Postsaccordion />
         <Contact />
