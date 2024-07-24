@@ -12,7 +12,7 @@ import Sqlite from './components/Sqlite';
 import BackgroundImage from './components/BackgroundImage';
 import ErrorBoundary from './components/ErrorBoundary';
 import { Postsaccordion } from './components/Postsaccordion';
-import { Services } from './components/Services';
+import Services  from './components/Services';
 import { Consultancy } from './components/Consultancy';
 import Footer  from './components/Footer';
 import Googlemap from './components/Googlemap';
@@ -48,10 +48,12 @@ function App() {
         <NavBar />
         <Keepalive />
         <Button />
+
         <Banner />
-        <Slider SliderJson={SliderJson} />
-        <Myworks />
         {/* <Services/> */}
+        <Slider SliderJson={SliderJson} />
+        {/* <Myworks /> */}
+
         <Postsaccordion />
         <Contact />
         <Googlemap />

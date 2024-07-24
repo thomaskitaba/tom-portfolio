@@ -111,7 +111,7 @@
 }
 
 
-/* * {
+/* *
   scrollbar-width: auto;
   scrollbar-color: red;
 }
@@ -223,7 +223,7 @@ input, select {
 .banner-background {
   transform-style: preserve-3d;
   position: relative;
-  z-index: 0;
+  z-index: 2;
   width: 100vw;
   background: #0f0c29;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
@@ -234,12 +234,18 @@ input, select {
   /* transform: translateZ(-10px) scale(2); */
   /* overflow-x: hidden; */
 }
-
+.heropage-artifact {
+  position: relative;
+  left: 50%;
+  top: 50%;
+  mix-blend-mode: multiply;
+  z-index: 3;
+  height: 200px;
+}
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
   line-height: normal;
-
 }
 .small-Text {
   display: flex;
@@ -1043,8 +1049,21 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .banner-moto-discription{
   color: car(--clr-txt-verywhite);
   padding-bottom: 0px;
+}
+.thomas-kitaba {
+  font-size: 7rem;
 
-
+}
+.full-stack {
+  font-size: 3rem;
+}
+@media (max-width: 767px) {
+  .thomas-kitaba {
+    font-size: 3rem;
+  }
+  .full-stack {
+    font-size: 1.75rem;
+  }
 }
 .banner .container {
   /* background-image: url(./assets/img/pizza-saturday.jpg); */
@@ -1269,13 +1288,13 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   grid-area: item-9;
 }
 
-.curriculum-design-images, .finish-curriculum-images, .early-child-development-images,
-.class-room-management-images,
-.problem-based-learning-images,
-.accelarated-learning-images,  .active-learning-images
+.Web-development-images, .graphic-design-images, .digital-marketing-images,
+.branding-solution-images,
+.content-creation-images,
+.ux-ui-design-images,  .seo-services-images
 {
   /* width: 100%; */
-  height: 200px;
+  height: 400px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1285,133 +1304,97 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   background-color: rgba(255, 255, 255, 0.2);
 
 }
-/* @keyframes fade-in-out {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
 
-.item-definition-and-image {
-  opacity: 0;
-  animation: fade-in-out 1s ease forwards;
-  visibility: hidden; /* Initially hide the element */
-/* } */
 
-/* .item-definition-and-image.visible {
-  visibility: visible; /* Make the element visible when it has the 'visible' class
-} */
-
-/* @keyframes view {
-  from {
-    visibility: hidden;
-  }
-  to {
-    visibility: visible;
-  }
-}
-
-.item-definition-and-image {
-  animation: fade-in-out 1s ease forwards;
-  animation-timeline: view 0s 1;
-  visibility: hidden; /* Initially hide the element
- } */
-
-/* .item-definition-and-image.visible {
-  visibility: visible; /* Make the element visible when it has the 'visible' class
-} */
-
-.curriculum-design-images{
+.Web-development-images{
   /* background-image: url(../src/assets/icons/blueprints.png); */
-  background-image: url(../src/assets/img/consultancy-images/curriculum-design.jpg);
+  background-image: url(../src/assets/img/slider-images/Web-development.jpg);
   transition: all 0.5s;
   /* border-right: 6px solid var(--clr-book-green);
   border-left: 6px solid var(--clr-book-green); */
   outline: var(--border-size) var(--border-style) var(--clr-book-green);
 }
-.finish-curriculum-images {
+.graphic-design-images {
   /* background-image: url(../src/assets/icons/plannin-3d.png); */
-  background-image: url(../src/assets/img/consultancy-images/finish-curriculum.jpg);
+  background-image: url(../src/assets/img/slider-images/graphic-design.jpg);
   /* border-right: 6px solid var(--clr-book-brown);
   border-left: 6px solid var(--clr-book-brown); */
   outline: var(--border-size) var(--border-style) var(--clr-book-brown);
 }
-.early-child-development-images {
+.digital-marketing-images {
   /* background-image: url(../src/assets/icons/chart.png); */
-  background-image: url(../src/assets/img/consultancy-images/early-child-development-2.webp);
+  background-image: url(../src/assets/img/slider-images/digital-marketing.jpg);
   /* border-right: 6px solid var(--clr-book-blue);
   border-left: 6px solid var(--clr-book-blue); */
   outline: var(--border-size) var(--border-style) var(--clr-book-blue);
 }
-.class-room-management-images {
+.branding-solution-images {
   /* background-image: url(../src/assets/icons/Class-Room-Management-2.png); */
-  background-image: url(../src/assets/img/consultancy-images/class-room-managment.jpg);
+  background-image: url(../src/assets/img/slider-images/branding-solution.jpg);
   transition: all 1s ease; /* Transition for filter and transform */
   /* border-right: 6px solid var(--clr-book-lightblue);
   border-left: 6px solid var(--clr-book-lightblue); */
   outline: var(--border-size) var(--border-style) var(--clr-book-lightblue);
 }
-.accelarated-learning-images {
+.ux-ui-design-images {
   /* background-image: url(../src/assets/icons/rocket-fast.png); */
   /* transition: rotate 500ms; */
-  background-image: url(../src/assets/img/consultancy-images/accelarated-learning.jpg);
+  background-image: url(../src/assets/img/slider-images/ux-ui.jpg);
   /* transform: rotate(-32deg); */
   transition: filter 0.5s ease, transform 0.5s ease; /* Transition for filter and transform */
   /* border-right: 6px solid var(--clr-book-lightgreen);
   border-left: 6px solid var(--clr-book-lightgreen); */
   outline: var(--border-size) var(--border-style) var(--clr-book-lightgreen);
 }
-.problem-based-learning-images {
+.content-creation-images {
   /* background-image:url(../src/assets/icons/attention.png); */
-  background-image: url(../src/assets/img/consultancy-images/problem-based-learning.jpeg);
+  background-image: url(../src/assets/img/slider-images/content-creation.jpg);
   /* border-right: 6px solid var(--clr-book-yellow);
   border-left: 6px solid var(--clr-book-yellow); */
   outline: var(--border-size) var(--border-style) var(--clr-book-yellow);
 }
-.active-learning-images {
+.seo-services-images {
   /* background-image:url(../src/assets/icons/studying-transformed.png); */
-  background-image: url(../src/assets/img/consultancy-images/active-learning.jpg);
+  background-image: url(../src/assets/img/slider-images/SEO.jpg);
   transition: filter 0.5s ease, transform 0.5s ease; /* Transition for filter and transform */
   /* border-right: 6px solid var(--clr-book-red);
   border-left: 6px solid var(--clr-book-red); */
   outline: var(--border-size) var(--border-style) var(--clr-book-red);
 }
 /**todo: **/
-.curriculum-design-images .item-title{
+.Web-development-images .item-title{
  color: var(--clr-book-green);
  text-shadow: 2px 2px 4px  #65959F, -2px -2px 4px #65959F;
  /* box-shadow: 1px 1px 4px white, -1px -1px 4px white; */
 }
-.finish-curriculum-images .item-title{
+.graphic-design-images .item-title{
   color: var(--clr-book-brown);
   text-shadow: 2px 2px 4px  #FA81E3, -2px -2px 4px #FA81E3;
 }
-.early-child-development-images .item-title{
+.digital-marketing-images .item-title{
   color: var(--clr-book-blue);
   text-shadow: 2px 2px 4px  rgb(255, 255, 0), -2px -2px 4px rgb(255, 255, 0);
 }
-.class-room-management-images .item-title {
+.branding-solution-images .item-title {
   color: var(--clr-book-lightblue);
   text-shadow: 2px 2px 4px  rgb(212, 154, 253), -2px -2px 4px rgb(212, 154, 253);
 }
-.accelarated-learning-images .item-title{
+.ux-ui-design-images .item-title{
   color: var(--clr-book-lightgreen);
   text-shadow: 2px 2px 4px  #b54b4d, -2px -2px 4px #c45658;
 }
-.problem-based-learning-images .item-title{
+.content-creation-images .item-title{
   color: var(--clr-book-yellow);
   text-shadow: 2px 2px 4px  rgb(90, 90, 247), -2px -2px 4px rgb(90, 90, 247);
 }
-.active-learning-images .item-title{
+.seo-services-images .item-title{
  color: var(--clr-book-red);
  text-shadow: 2px 2px 4px  rgb(113, 244, 244), -2px -2px 4px rgb(113, 244, 244);
 }
 
 /**todo end**/
 
-.curriculum-design-images:hover, .finish-curriculum-images:hover, .early-child-development-images:hover, .early-child-development-images:hover, .class-room-management-images:hover, .accelarated-learning-images:hover, .problem-based-learning-images:hover, .active-learning-images:hover {
+.Web-development-images:hover, .graphic-design-images:hover, .digital-marketing-images:hover, .branding-solution-images:hover, .ux-ui-design-images:hover, .content-creation-images:hover, .seo-services-images:hover {
   filter: var(--clr-bg-two);
 
   /* transform: translate(100, -20px); */
@@ -1419,13 +1402,13 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 
 
-.item-1:hover .curriculum-design-images {
+.item-1:hover .Web-development-images {
   transform: scaleX(-1);
 }
-.item-4:hover .class-room-management-images {
+.item-4:hover .branding-solution-images {
   transform: scaleX(-1);
 }
-.item-5:hover .accelarated-learning-images {
+.item-5:hover .ux-ui-design-images {
   filter: var(--clr-bg-two);
    /* Move the image up by 20px */
    animation: launch 1000ms linear;
@@ -1436,7 +1419,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   100% { transform: translate(180px, -150px) scale(0.5, 0.5)}
 }
 
-.item-7:hover .active-learning-images {
+.item-7:hover .seo-services-images {
   animation: slide 2000ms linear;
 }
 
@@ -1481,10 +1464,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 @media (min-width: 767px) {
-  .curriculum-design-images, .finish-curriculum-images, .early-child-development-images,
-.class-room-management-images,
-.problem-based-learning-images,
-.accelarated-learning-images,  .active-learning-images {
+  .Web-development-images, .graphic-design-images, .digital-marketing-images,
+.branding-solution-images,
+.content-creation-images,
+.ux-ui-design-images,  .seo-services-images {
   height: 400px;
 }
   .service-container-inner {
@@ -1512,132 +1495,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 /* Style for the items */
 
 
-/********** Consultancy content *******************/
-
-.consultancy-container {
-
-  /* background: -webkit-linear-gradient(to right, #2F0743, #41295a);
-  background: linear-gradient(to right, #2F0743, #41295a); */
-  background-color: white;
-  width: 100vw;
-  padding: 20px;
-  color: black;
-  font-size: 1.25rem;
-
-}
-.item-background-universal {
-  background: #ADA996;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-}
-
-.consultancy.item {
-
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-.consultancy-col {
-  position: relative;
-
-  width: 100%;
-  height: 100%;
-}
-.consultancy-image {
-  width: 100%;
-  height: 150px;
-  padding: 10px;
-  align-self: center;
-
-}
-.consultancy-title {
-  position: absolute;
-  top: 20px;
-  left: 50%;
-  transform: translate(-50%, 0);
-  background-color: rgba(255, 255, 255, 0.7);
-  border-radius: 20px;
-  padding: 10px;
-
-}
-.consultancy-definition {
-  display: none;
-  background-color:  rgba(255, 255, 255, 0.5);
-  top: 60px;
-  margin-bottom: 10px;
-  transition: all 500ms;
-}
-
-
-.consultancy-description {
-  text-align: center;
-  line-height: 1.5rem;
-  /* background-color: rgba(255, 255, 255, 0.7); */
-  border-radius: 8px;
-  padding: 20px;
-  width: 90%;
-  height: 100%;
-  align-self: center;
-
-}
-.curriculum-design {
-  background-image: url(../src/assets/img/consultancy-images/curriculum-design-2.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
-}
-.finish-curriculum {
-  background-image: url(../src/assets/img/consultancy-images/accelarated-learning-2.jpg
-
-  );
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
-}
-.eary-child-development {
-  background-image: url(../src/assets/img/consultancy-images/early-child-development-2.webp);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
-}
-.class-room-management {
-  background-image: url(../src/assets/img/consultancy-images/class-room-managment.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-.accelarated-learning {
-  background-image: url(../src/assets/img/consultancy-images/accelarated-learning.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
-}
-.problem-based-learning {
-  background-image: url(../src/assets/img/consultancy-images/early-child-development-2.webp);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-.active-learning {
-  background-image: url(../src/assets/img/consultancy-images/curriculum-design-2.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
-}
-
-@media (min-width: 767px) {
-  .consultancy-container {
-    padding: 160px;
-  }
-
-}
 
 
 /* ******post toogle checkbox *********** */
@@ -2427,7 +2284,6 @@ background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996); /* W3
   animation: scroll 20s linear infinite;
 }
 
-
 .work-slide-frame::-webkit-scrollbar {
   height: 12px; /* Adjust scrollbar height */
 }
@@ -2460,9 +2316,13 @@ background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996); /* W3
   border: 2px solid white;
   width: 250px;
   height: 250px;
-  background:  var(--gradiant-color-green);
+  /* background:  var(--gradiant-color-green); */
   box-shadow: 2px 2px 8px blue;
   border-radius: 8px;
+
+  background-size: 100% 100%;
+background-position: 0px 0px,0px 0px,0px 0px,0px 0px,0px 0px;
+background-image: radial-gradient(49% 81% at 45% 47%, #62FF00FF 0%, #073AFF00 70%),radial-gradient(113% 91% at 17% -2%, #56ab2f 1%, #FF000000 99%),radial-gradient(142% 91% at 83% 7%, #00FF12FF 1%, #FF000000 99%),radial-gradient(142% 91% at -6% 74%, #34FF00FF 1%, #FF000000 99%),radial-gradient(142% 91% at 111% 84%, #56ab2f 0%, #00FF50FF 100%);
 }
 
 .work-slide:hover {
@@ -2502,6 +2362,7 @@ background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996); /* W3
 
 
 /********** slider ************/
+
 .slide-container-all {
   position: relative;
   border-bottom: 2px solid white;
@@ -2695,33 +2556,7 @@ margin-top: 20px;
 
   }
 }
-/* @media (m-width: 1200px) {
-  .swiper-card {
-    text-align: justify;
-    margin: 100px;
-  }
-} */
-/************ Posts ************/
-/* .accordion-container-main {
-  width: 100%;
-}
 
-.accordion-item {
-  width: 100%;
-}
-
-.post-content {
-  width: 100%;
-}
-
-.comment-box {
-  width: 100%;
-}
-
-.comment-reply-box {
-  width: 100%;
-} */
-/* ---------alien above------------------------ */
 .blog-post {
   position: relative;
 

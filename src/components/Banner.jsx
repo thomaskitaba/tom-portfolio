@@ -3,7 +3,7 @@ import {Container, Row, Col} from "react-bootstrap";
 import {ArrowRightCircle} from "react-bootstrap-icons";
 import {useContext} from 'react';
 import MyContext from './MyContext';
-import headerImg from '../assets/img/websiteimages/books.png';
+import headerImg from '../assets/img/websiteimages/self-photo.png';
 // import headerImg from '../assets/img/websiteimages/books-1.png';
 // import wave from '../assets/img/wave.jpg';
 
@@ -17,8 +17,8 @@ export const Banner = () => {
         <Container className="container">
           <Row className="banner-moto">
             <Col>
-              <h1 >Thomas Kitaba</h1>
-              <h2> Full-Stack Web Developer </h2>
+              <div className="thomas-kitaba">Thomas Kitaba</div>
+              <div className="full-stack"> Full-Stack Web Developer </div>
             </Col>
           </Row>
           <Row className="banner-moto-discription align-items-center">

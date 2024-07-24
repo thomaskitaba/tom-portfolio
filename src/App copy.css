@@ -111,7 +111,7 @@
 }
 
 
-/* * {
+/* *
   scrollbar-width: auto;
   scrollbar-color: red;
 }
@@ -1202,8 +1202,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   background: #0f0c29;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
-  /* background-size: cover;
-  background-repeat: no-repeat; */
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .service-container-inner {
   /* background-color: #abc3ff; */
@@ -1323,12 +1323,12 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   visibility: visible; /* Make the element visible when it has the 'visible' class
 } */
 
--images{
+.curriculum-design-images{
   /* background-image: url(../src/assets/icons/blueprints.png); */
   background-image: url(../src/assets/img/consultancy-images/curriculum-design.jpg);
   transition: all 0.5s;
   /* border-right: 6px solid var(--clr-book-green);
-  border-l.curriculum-designeft: 6px solid var(--clr-book-green); */
+  border-left: 6px solid var(--clr-book-green); */
   outline: var(--border-size) var(--border-style) var(--clr-book-green);
 }
 .finish-curriculum-images {
@@ -1582,14 +1582,14 @@ background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996); /* W3
   align-self: center;
 
 }
-/* .curriculum-design {
+.curriculum-design {
   background-image: url(../src/assets/img/consultancy-images/curriculum-design-2.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 
-} */
-/* .finish-curriculum {
+}
+.finish-curriculum {
   background-image: url(../src/assets/img/consultancy-images/accelarated-learning-2.jpg
 
   );
@@ -1597,7 +1597,7 @@ background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996); /* W3
   background-position: center;
   background-repeat: no-repeat;
 
-} */
+}
 .eary-child-development {
   background-image: url(../src/assets/img/consultancy-images/early-child-development-2.webp);
   background-size: cover;
@@ -2387,8 +2387,125 @@ background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996); /* W3
     transform: rotate(360deg);
   }
 }
+/* ********* Mywork ********* */
+.work-slides {
+  background-color: grey;
+  position: relative;
+  width: 100%;
+  perspective: 100px; /* Apply perspective to the parent element */
+}
+
+.work-slides::before, .work-slides::after {
+  content: '';
+  height: 100%;
+  width: 10%;
+  position: absolute;
+  z-index: 3;
+}
+
+.work-slides::before {
+  left: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.work-slides::after {
+  right: 0;
+  top: 0;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0), white);
+}
+
+.work-slide-frame {
+  padding-block: 20px;
+  background-color: white;
+  display: flex;
+  width: calc(250px * 12);
+  gap: 20px;
+  overflow: hidden;
+  overflow-x: scroll; /* Ensure horizontal scroll is enabled */
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: blue white; /* Firefox */
+  animation: scroll 20s linear infinite;
+}
+
+.work-slide-frame::-webkit-scrollbar {
+  height: 12px; /* Adjust scrollbar height */
+}
+
+.work-slide-frame::-webkit-scrollbar-track {
+  background: white; /* Track color */
+}
+
+.work-slide-frame::-webkit-scrollbar-thumb {
+  background-color: blue; /* Scrollbar color */
+  border-radius: 6px; /* Scrollbar thumb roundness */
+  border: 3px solid white; /* Border around scrollbar thumb */
+}
+
+.work-slide-frame:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 6));
+  }
+}
+
+.work-slide {
+  cursor: pointer;
+  border: 2px solid white;
+  width: 250px;
+  height: 250px;
+  /* background:  var(--gradiant-color-green); */
+  box-shadow: 2px 2px 8px blue;
+  border-radius: 8px;
+
+  background-size: 100% 100%;
+background-position: 0px 0px,0px 0px,0px 0px,0px 0px,0px 0px;
+background-image: radial-gradient(49% 81% at 45% 47%, #62FF00FF 0%, #073AFF00 70%),radial-gradient(113% 91% at 17% -2%, #56ab2f 1%, #FF000000 99%),radial-gradient(142% 91% at 83% 7%, #00FF12FF 1%, #FF000000 99%),radial-gradient(142% 91% at -6% 74%, #34FF00FF 1%, #FF000000 99%),radial-gradient(142% 91% at 111% 84%, #56ab2f 0%, #00FF50FF 100%);
+}
+
+.work-slide:hover {
+  z-index: 9999;
+  transform: translateZ(10px); /* This will now work as expected */
+  outline: var(--border-size) var(--border-style) var(--clr-book-green);
+}
+
+/* @media (max-width: 767px) {
+  .work-slides {
+    width: 100%;
+  }
+  .work-slide-frame {
+    margin: 0 auto;
+    width: auto;
+    animation-play-state: paused;
+    flex-wrap: wrap;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+    border: 2px red solid;
+    padding: 10px;
+  }
+  .work-slide {
+    border: 2px red solid;
+    width: calc(50% - 10px);
+    height: 150px;
+    padding: 20px 0;
+  }
+  .work-slide:hover {
+    transform: translateZ(0);
+  }
+  .work-slide-frame .work-slide:nth-child(n+7) {
+    display: none;
+  }
+} */
+
 
 /********** slider ************/
+
 .slide-container-all {
   position: relative;
   border-bottom: 2px solid white;
@@ -2416,7 +2533,15 @@ background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996); /* W3
   color: green;
   text-shadow: 1px 1px 2px rgb(34, 28, 28);
 }
-
+.mywork-title {
+  font-size: 4rem;
+  text-shadow: 0px 1px 2px rgb(34, 28, 28);
+  padding: 20px;
+  /* background-color: rgba(12, 12, 12, 0.1); */
+  width: 100%;
+  color: green;
+  text-shadow: 1px 1px 2px rgb(34, 28, 28);
+}
 .swiper-button-prev,
 .swiper-button-next{
   display: none;

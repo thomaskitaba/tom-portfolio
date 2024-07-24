@@ -1,70 +1,63 @@
 const SliderJson = [
   {
     id: 1,
-    className: 'curriculum-design',
+    className: 'web-development',
     title: 'Web Development',
     definition: 'Creating and maintaining engaging and functional websites.',
-    imageUrl: 'curriculum-design-images',
+    imageUrl: 'Web-development-images',
     description: `
       "Offering professional web development services to design and build interactive, responsive, and user-friendly websites tailored to your business needs. Transforming your online presence to drive engagement and growth."
     `,
   },
   {
     id: 2,
-    className: 'finish-curriculum',
+    className: 'graphic-design',
     title: 'Graphic Design',
     definition: 'Crafting visually appealing and effective graphic designs.',
-    imageUrl: 'finish-curriculum-images',
+    imageUrl: 'graphic-design-images',
     description: `
       "Specializing in creating visually captivating graphics that effectively communicate your brand message. From logos to marketing materials, enhancing your visual identity to stand out in the market."
     `,
   },
   {
     id: 3,
-    className: 'early-child-development',
+    className: 'digital-marketing',
     title: 'Digital Marketing',
     definition: 'Developing and executing strategic digital marketing campaigns.',
-    imageUrl: 'early-child-development-images',
+    imageUrl: 'digital-marketing-images',
     description: `
       "Providing comprehensive digital marketing services, including SEO, social media management, and online advertising. Helping you reach your target audience and achieve measurable results."
     `,
   },
-  {
-    id: 4,
-    className: 'class-room-management',
-    title: 'Branding Solutions',
-    definition: 'Creating cohesive and impactful brand identities.',
-    imageUrl: 'class-room-management-images',
-    description: `
-      "Developing strong and memorable brand identities that resonate with your audience. Offering complete branding solutions from concept to execution to establish a powerful market presence."
-    `,
-  },
+
   {
     id: 5,
-    className: 'accelerated-learning',
+    className: 'ui-ux-design',
     title: 'UI/UX Design',
     definition: 'Designing intuitive and user-friendly interfaces.',
-    imageUrl: 'accelarated-learning-images',
+    imageUrl: 'ux-ui-design-images',
     description: `
       "Focusing on user experience to design interfaces that are not only visually appealing but also intuitive and easy to navigate. Enhancing user satisfaction and engagement with thoughtful UI/UX design."
     `,
   },
   {
     id: 6,
-    className: 'problem-based-learning',
+    className: 'content-creation',
+    classNameOld: 'problem-based-learning',
     title: 'Content Creation',
     definition: 'Developing engaging and relevant content for various platforms.',
-    imageUrl: 'problem-based-learning-images',
+    imageUrl: 'content-creation-images',
     description: `
       "Creating high-quality content that engages and informs your audience. From blog posts to social media content, ensuring your message is delivered effectively across all channels."
     `,
   },
   {
     id: 7,
-    className: 'active-learning',
+    className: 'seo-services',
+    classNameOld: 'active-learning',
     title: 'SEO Services',
     definition: 'Optimizing websites to improve search engine rankings.',
-    imageUrl: 'active-learning-images',
+    imageUrl: 'seo-services-images',
     description: `
       "Providing expert SEO services to boost your website's visibility on search engines. Implementing proven strategies to improve your ranking, drive traffic, and increase online presence."
     `,
@@ -72,6 +65,20 @@ const SliderJson = [
 ];
 
 export default SliderJson;
+
+
+// {
+//   id: 4,
+//   className: 'branding-solution',
+//   classNameOld: 'class-room-management',
+//   title: 'Branding Solutions',
+//   definition: 'Creating cohesive and impactful brand identities.',
+//   imageUrl: 'branding-solution-images',
+//   description: `
+//     "Developing strong and memorable brand identities that resonate with your audience. Offering complete branding solutions from concept to execution to establish a powerful market presence."
+//   `,
+// },
+
 
 // const SliderJson = [
 //   {
