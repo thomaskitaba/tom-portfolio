@@ -4,10 +4,6 @@ import './App.css';
 import { NavBar } from './components/NavBar';
 import { Banner } from './components/Banner';
 import { Notification } from './components/Notification';
-import UserManagment from './components/UserManagment';
-import Posts  from './components/Posts';
-import NavBar2 from './components/NavBar2';
-import Sqlite from './components/Sqlite';
 
 import BackgroundImage from './components/BackgroundImage';
 import ErrorBoundary from './components/ErrorBoundary';
@@ -22,6 +18,8 @@ import Button from './components/Button';
 import Slider from './components/Slider';
 import SliderJson from './components/SliderJson';
 import Myworks from './components/Myworks';
+import Websites from './components/Websites';
+import Grahpicsdesigns from './components/Grahpicsdesigns';
 import Texture from './components/Texture';
 import Busy from './components/Busy';
 import Keepalive from './components/Keepalive';
@@ -48,12 +46,12 @@ function App() {
         <NavBar />
         <Keepalive />
         <Button />
-
         <Banner />
         {/* <Services/> */}
         <Slider SliderJson={SliderJson} />
         {/* <Myworks /> */}
-
+        {/* <Websites />
+        <Grahpicsdesigns /> */}
         <Postsaccordion />
         <Contact />
         <Googlemap />
