@@ -50,8 +50,8 @@ function App() {
         {/* <Services/> */}
         <Slider SliderJson={SliderJson} />
         {/* <Myworks /> */}
-        {/* <Websites />
-        <Grahpicsdesigns /> */}
+        <Websites />
+        <Grahpicsdesigns />
         <Postsaccordion />
         <Contact />
         <Googlemap />

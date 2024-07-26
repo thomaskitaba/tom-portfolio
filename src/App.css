@@ -1492,10 +1492,89 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     padding: 40px;
   }
 }
-/* Style for the items */
+
+/*************** My Works   ***************/
+.mywork-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  background-color: white;
+  perspective: 10px;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+.mywork-card {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
 
+}
+.mywork-card:hover {
+  transform: scale(1.05);
+  transition: all 0.5s;
+  z-index: 9;
 
+  /* transform: skew(-2deg, -1deg) scale(1.1) rotate(2deg); */
+
+  transition: transform 0.3s ease-in-out;
+
+
+}
+.website-images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--clr-bg-verywhite);
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+  width: 100%;
+  height: auto;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: var(--clr-bg-one);
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.work-title {
+  font-size: 1rem;
+}
+.work-description {
+  font-size: 0.75rem;
+}
+.
+.graphic-design-images {
+
+}
+.game-images {
+
+}
+
+@media (min-width: 767px) {
+
+  .mywork-container {
+    width: 100%;
+    justify-content: center;
+  }
+  .mywork-card {
+    width: 80%;
+    /* display: flex; */
+    flex: 1;
+    /* gap: 20px; */
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+  .website-images {
+    width: 100%;
+    gap: 10px;
+
+  }
+}
 
 /* ******post toogle checkbox *********** */
 

@@ -1,5 +1,4 @@
 import Grahpicsdesignsjson from './Grahpicsdesignsjson';
-import Image1 from '../assets/img/myworks/graphicsdesign/ship-and-cat.jpg';
 const Grahpicsdesigns = () => {
   const url = '../assets/img/myworks/graphicsdesign/';
 return (

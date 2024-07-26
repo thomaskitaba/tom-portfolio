@@ -21,20 +21,30 @@ const Websites = () => {
   return (
     <>
 
-      <h1>Websites build</h1>
+      <h1 className="mywork-title">Websites build</h1>
+      <div className= 'mywork-container'>
       {Websitesjson.map((website) => {
         const imageSrc = getImage(website.imageUrl);
         return (
-          <div key={website.id} className={website.className}>
-            <div>{website.title}</div>
-            {imageSrc ? (
-              <img src={imageSrc} alt={website.title} className="website-images"/>
-            ) : (
-              <p>Image not found</p> //
-            )}
-          </div>
+
+              <div key={website.id} className="mywork-card">
+                  <a href={website.link} target="_blank" rel="noreferrer" className="mywork-card">
+              {imageSrc ? (
+                <img src={imageSrc} alt={website.title} className="website-images"/>
+              ) : (
+                <p>Image not found</p> //
+              )}
+              </a>
+              <div>
+              <div className='work-title'>{website.title}</div>
+              <div className='work-description'>{website.description}</div>
+              </div>
+            </div>
+
+
         );
       })}
+      </div>
     </>
   );
 };
