@@ -1,9 +1,9 @@
 const Graphicsdesignsjson = [
   {
     id: 0,
-    className: 'robot-patriot',
-    title: 'Final Farewell',
-    technology: 'Adobe Photoshop',
+    className: '',
+    title: '',
+    technology: '',
     link: 'https://imgur.com/ArmyWPC',
     imageUrl: 'final-farewell-card.jpg',
     description: `

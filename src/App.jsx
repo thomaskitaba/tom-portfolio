@@ -18,8 +18,11 @@ import Button from './components/Button';
 import Slider from './components/Slider';
 import SliderJson from './components/SliderJson';
 import Myworks from './components/Myworks';
+
 import Websites from './components/Websites';
 import Graphicsdesigns from './components/Graphicsdesigns';
+import Games from './components/Games';
+
 import Texture from './components/Texture';
 import Busy from './components/Busy';
 import Keepalive from './components/Keepalive';
@@ -52,6 +55,7 @@ function App() {
         {/* <Myworks /> */}
         <Websites />
         <Graphicsdesigns />
+        <Games />
         <Postsaccordion />
         <Contact />
         <Googlemap />

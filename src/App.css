@@ -1305,7 +1305,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 }
 
-
 .Web-development-images{
   /* background-image: url(../src/assets/icons/blueprints.png); */
   background-image: url(../src/assets/img/slider-images/Web-development.jpg);
@@ -1329,11 +1328,11 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   outline: var(--border-size) var(--border-style) var(--clr-book-blue);
 }
 .branding-solution-images {
-  /* background-image: url(../src/assets/icons/Class-Room-Management-2.png); */
+
   background-image: url(../src/assets/img/slider-images/branding-solution.jpg);
-  transition: all 1s ease; /* Transition for filter and transform */
-  /* border-right: 6px solid var(--clr-book-lightblue);
-  border-left: 6px solid var(--clr-book-lightblue); */
+  transition: all 1s ease;
+
+  border-left: 6px solid var(--clr-book-lightblue);
   outline: var(--border-size) var(--border-style) var(--clr-book-lightblue);
 }
 .ux-ui-design-images {
@@ -1391,9 +1390,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
  color: var(--clr-book-red);
  text-shadow: 2px 2px 4px  rgb(113, 244, 244), -2px -2px 4px rgb(113, 244, 244);
 }
-
 /**todo end**/
-
 .Web-development-images:hover, .graphic-design-images:hover, .digital-marketing-images:hover, .branding-solution-images:hover, .ux-ui-design-images:hover, .content-creation-images:hover, .seo-services-images:hover {
   filter: var(--clr-bg-two);
 
@@ -1524,7 +1521,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   gap: 5px;
   /* border: 1px solid red; */
 }
-.mywork-card:hover .mywork-card{
+.mywork-card:hover{
   transform: scale(1.05);
   transition: all 0.5s;
   z-index: 9;
@@ -2590,12 +2587,13 @@ background-image: radial-gradient(49% 81% at 45% 47%, #62FF00FF 0%, #073AFF00 70
 position: relative;
 margin-top: 20px;
 }
-.text-with-texture {
+/* .text-with-texture {
   background-image: url('path/to/texture-image.jpg');
-  color: transparent; /* Hide the text */
-  -webkit-background-clip: text; /* Clip the background to the text */
+  color: transparent;
+  -webkit-background-clip: text;
   background-clip: text;
-}
+} */
+
 .item-title {
   /* background-image: url(../src/assets/img/wave.jpg); */
   display: flex;
