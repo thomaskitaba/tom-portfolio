@@ -4,7 +4,7 @@ const Websitesjson = [
     className: 'tom-burger',
     title: 'Tom Restorant',
     technology: 'React, nodejs',
-    link: 'thomaskitaba.github.io/tom-restorant',
+    link: 'https://www.thomaskitaba.github.io/tom-restorant',
     imageUrl: 'tom-restorant-card.jpg',
     description: `
       "light weight webapp developed for a burger shop,"
@@ -26,6 +26,7 @@ const Websitesjson = [
     className: 'tom-menu',
     title: 'Tom Menu',
     technology: 'React, Nodejs',
+    link: "https://www.thomaskitaba.github.io/panorama-menu",
     imageUrl: 'tom-menu-card.jpg',
     description: `
       "Food and beverage menu, for a middium sized hotel"
@@ -36,9 +37,10 @@ const Websitesjson = [
     className: 'tom-blog-post',
     title: 'Tom Blog Post',
     technology: 'React, Nodejs',
-    imageUrl: 'tom-menu-card.jpg',
+    link: 'https://www.thomaskitaba.github.io/tom-menu',
+    imageUrl: 'tom-blog-post.jpg',
     description: `
-      "Food and beverage menu, for a middium sized hotel"
+      "Research Sharing site"
     `,
   },
 

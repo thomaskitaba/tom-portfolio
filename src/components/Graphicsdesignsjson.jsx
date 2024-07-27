@@ -1,11 +1,11 @@
-const Grahpicsdesignsjson = [
+const Graphicsdesignsjson = [
   {
     id: 0,
-    className: 'ship-and-cat',
-    title: 'The final Farewell',
+    className: 'robot-patriot',
+    title: 'Final Farewell',
     technology: 'Adobe Photoshop',
     link: 'https://imgur.com/ArmyWPC',
-    imageUrl: '../assets/img/myworks/graphicsdesign/ship-and-cat.jpg',
+    imageUrl: 'final-farewell-card.jpg',
     description: `
       "cat smelling the sheep minutes before its' slaughter."
     `,
@@ -13,12 +13,12 @@ const Grahpicsdesignsjson = [
   {
     id: 1,
     className: 'ethiopian-women',
-    title: 'Tom Restorant',
+    title: 'Face of Ethiopia',
     technology: 'Adobe Photoshop',
     link: 'https://imgur.com/xpo5jDK',
-    imageUrl: '../assets/img/myworks/graphicsdesign/ethiopia-women.jpg',
+    imageUrl: 'ethiopia-face-card.jpg',
     description: `
-      "Typical Women living on the southern part of ethipia, where ethiopanism is writien all over her face"
+      "Typical Women living on the southern part of ethipia."
     `,
   },
   {
@@ -27,9 +27,9 @@ const Grahpicsdesignsjson = [
     title: 'Ship of Tana',
     technology: 'Adobe Photoshop',
     link: 'https://imgur.com/JHkqqdU',
-    imageUrl: '../assets/img/myworks/graphicsdesign/ship-of-tana.jpg',
+    imageUrl: 'ship-of-tana-card.jpg',
     description: `
-      ""
+      "cultural fishing on tana"
     `,
   },
   {
@@ -38,7 +38,7 @@ const Grahpicsdesignsjson = [
     title: 'Robot Patriot',
     technology: 'Adobe Photoshop',
     link: 'https://imgur.com/4VGRRSe',
-    imageUrl: '../assets/img/myworks/graphicsdesign/robot-patriot.jpg',
+    imageUrl: 'robot-patriot-card.jpg',
     description: `
       "every thing is made from scratch, to show some little sketch the looked worthless can be brought back to life."
     `,
@@ -46,4 +46,4 @@ const Grahpicsdesignsjson = [
 
 ];
 
-export default Grahpicsdesignsjson;
+export default Graphicsdesignsjson;

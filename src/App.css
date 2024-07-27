@@ -1485,7 +1485,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     width: 70%;
     font-size: 1.25rem;
     padding: 10px;
-
     margin: 0px auto;
   }
   .item-1, .item-2, .item-3, .item-4, .item-5, .item-6, .item-7, .item-8, .item-9 {
@@ -1503,55 +1502,82 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   perspective: 10px;
   flex-wrap: wrap;
   padding: 10px;
+  /* align-items: flex-start; */
+}
+.mywork-title {
+  font-size: 2rem;
+  text-shadow: 0px 1px 2px rgb(34, 28, 28);
+  padding: 20px;
+  /* background-color: rgba(12, 12, 12, 0.1); */
+  width: 100%;
+  color: green;
+  text-shadow: 1px 1px 2px rgb(34, 28, 28);
 }
 .mywork-card {
-  width: 200px;
+  width: 180px;
+  height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-
-
+  /* justify-content: flex-start; */
+  padding: 5px;
+  gap: 5px;
+  /* border: 1px solid red; */
 }
-.mywork-card:hover {
+.mywork-card:hover .mywork-card{
   transform: scale(1.05);
   transition: all 0.5s;
   z-index: 9;
-
+  /* background-color: rgba(0, 0, 255, 0.1); */
   /* transform: skew(-2deg, -1deg) scale(1.1) rotate(2deg); */
-
   transition: transform 0.3s ease-in-out;
 
-
+}
+.mywork-card:hover .website-images {
+  background-color: rgba(0, 0, 255, 0.4);
 }
 .website-images {
+  /* border: 2px blue dashed; */
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   background-color: var(--clr-bg-verywhite);
   border-radius: 10px;
-  padding: 10px;
-  margin: 10px;
+  padding: 5px;
+  margin: 0 auto;
   width: 100%;
   height: auto;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   filter: var(--clr-bg-one);
-  position: relative;
+  /* position: relative; */
   background-color: rgba(255, 255, 255, 0.2);
 }
 .work-title {
   font-size: 1rem;
+  align-self: flex-start;
+  color: green;
+  padding-left: 10px;
+
+}
+
+.word-title :nth-child(1) {
+  text-decoration: underline;
 }
 .work-description {
   font-size: 0.75rem;
 }
-.
-.graphic-design-images {
 
-}
-.game-images {
-
+.work-detail-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 5px;
+  /* justify-content: center; */
+  /* border: 2px grey solid; */
+  height: 100%;
+  width: 100%;
 }
 
 @media (min-width: 767px) {
@@ -2469,15 +2495,7 @@ background-image: radial-gradient(49% 81% at 45% 47%, #62FF00FF 0%, #073AFF00 70
   color: green;
   text-shadow: 1px 1px 2px rgb(34, 28, 28);
 }
-.mywork-title {
-  font-size: 4rem;
-  text-shadow: 0px 1px 2px rgb(34, 28, 28);
-  padding: 20px;
-  /* background-color: rgba(12, 12, 12, 0.1); */
-  width: 100%;
-  color: green;
-  text-shadow: 1px 1px 2px rgb(34, 28, 28);
-}
+
 .swiper-button-prev,
 .swiper-button-next{
   display: none;

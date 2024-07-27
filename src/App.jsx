@@ -19,7 +19,7 @@ import Slider from './components/Slider';
 import SliderJson from './components/SliderJson';
 import Myworks from './components/Myworks';
 import Websites from './components/Websites';
-import Grahpicsdesigns from './components/Grahpicsdesigns';
+import Graphicsdesigns from './components/Graphicsdesigns';
 import Texture from './components/Texture';
 import Busy from './components/Busy';
 import Keepalive from './components/Keepalive';
@@ -51,7 +51,7 @@ function App() {
         <Slider SliderJson={SliderJson} />
         {/* <Myworks /> */}
         <Websites />
-        <Grahpicsdesigns />
+        <Graphicsdesigns />
         <Postsaccordion />
         <Contact />
         <Googlemap />
