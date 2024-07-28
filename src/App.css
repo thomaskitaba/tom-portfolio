@@ -1018,7 +1018,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     opacity: 0.75;
     /* border: 2px yellow solid; */
 
-
   }
   .navbar-nav {
 
@@ -1921,37 +1920,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .contribute-button-2:hover {
   background: rgba(var(--clr-notification-info), 0.3);
 }
-/* .subscribe-button {
-  margin: 0 auto;
-  background: black;
-  color: white;
-  width: 200px;
-  padding: 20px;
-  height: 50px;
-   inset: -20px;
-   z-index: 9999999999;
- }
- .subscribe-button:hover {
-   background: white;
-   color: rgb(71, 70, 70);
- }
- .subscribe-button {
-  background-color: #4e8bff;
-  background-image: linear-gradient(to bottom, #4e8bff, #2563eb);
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-  font-weight: bold;
-  text-transform: uppercase;
-  transition: background-color 0.3s ease;
-}
 
-.subscribe-button:hover {
-  background-color: #2563eb;
-} */
 .subscribe-button {
   font-family: 'Open Sans', sans-serif;
   background-color: #4e8bff; /* Fallback color */
@@ -1978,7 +1947,29 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   box-shadow: 3px 4px 8px rgba(0, 0, 255, 0.7), -3px -2px 4px rgba(0, 0, 255, 0.7);
   /* filter: drop-shadow(-0.2rem -0.2rem 0.5rem rgba(236, 181, 78, 1)); */
 }
+.subsicribe-cv-container {
+  display: flex;
+  perspective: 10px;
+}
+.cv-icon {
+ color: green;
+ position: relative;
+ /* box-shadow: 1px 1px 4px white; */
+}
+.cv-icon:hover {
+  color: lightgreen;
+  transform: scale(1.1);
+}
 
+.cv-icon::before {
+  content: 'CV';
+  position: absolute;
+  color: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
 .save-2 {
   position: absolute;
   left: 15px;

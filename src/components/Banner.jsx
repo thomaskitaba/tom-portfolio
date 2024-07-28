@@ -4,6 +4,7 @@ import {ArrowRightCircle} from "react-bootstrap-icons";
 import {useContext} from 'react';
 import MyContext from './MyContext';
 import headerImg from '../assets/img/websiteimages/self-photo.png';
+import { FaFileAlt } from 'react-icons/fa';
 // import headerImg from '../assets/img/websiteimages/books-1.png';
 // import wave from '../assets/img/wave.jpg';
 
@@ -40,21 +41,29 @@ export const Banner = () => {
                 </ul>
               {/* </span> */}
               </h1>
-
               </div>
-
               {/* <button href="#footer" onClick={() => console.log('connect')}>Let's Connect<ArrowRightCircle /></button> */}
             </Col>
           </Row>
+          <Row className="subsicribe-cv-container">
+            <div>
           {!subscriber ?
-          <div className="subscribe-button" onClick={(e)=> setSubscribe(true)}> Join My Community: Subscribe to My Blogs </div>
-          : null
-}
+          <>
+            <div className="subscribe-button" onClick={(e)=> setSubscribe(true)}> Join My Community: Subscribe to My Blogs </div>
+
+            </> : null
+          }
+            </div>
+            <div className="resume-container">
+            <a className="resume-anchor" target="_blank" href="https://app.enhancv.com/share/d0ab32c5/?utm_medium=growth&utm_campaign=share-resume&utm_source=dynamic">
+               < FaFileAlt size={50}/>
+            </a>
+            </div>
+          </Row>
           <Row>
           </Row>
         </Container>
       </section>
       </div>
-
     )
 }
