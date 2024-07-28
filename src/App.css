@@ -1336,7 +1336,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 .branding-solution-images {
 
-  background-image: url(../src/assets/img/slider-images/branding-solution.jpg);
+  /* background-image: url(../src/assets/img/slider-images/branding-solution.jpg); */
   transition: all 1s ease;
 
   border-left: 6px solid var(--clr-book-lightblue);
