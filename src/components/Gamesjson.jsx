@@ -17,7 +17,6 @@ const Gamesjson = [
     title: 'Tom Mini War',
     technology: 'pycode',
     link: 'https://youtu.be/zmIz9BZAAxk',
-    videoLink: '',
     imageUrl: 'game-war-card.jpg',
     videoLink: 'https://youtu.be/zmIz9BZAAxk',
     githubLink: 'https://github.com/thomaskitaba',
