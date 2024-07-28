@@ -53,12 +53,12 @@ export const Banner = () => {
 
             </> : null
           }
-            </div>
-            <div className="resume-container">
-            <a className="resume-anchor" target="_blank" href="https://app.enhancv.com/share/d0ab32c5/?utm_medium=growth&utm_campaign=share-resume&utm_source=dynamic">
-               < FaFileAlt size={50}/>
-            </a>
-            </div>
+          </div>
+          {/* <div className="resume-container">
+          <a className="resume-anchor" target="_blank" href="https://app.enhancv.com/share/d0ab32c5/?utm_medium=growth&utm_campaign=share-resume&utm_source=dynamic">
+              < FaFileAlt size={50}/>
+          </a>
+          </div> */}
           </Row>
           <Row>
           </Row>

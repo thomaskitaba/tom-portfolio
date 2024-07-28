@@ -46,19 +46,16 @@ export const NavBar = () => {
                 <Nav.Link href="#home" className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('home')}>Home</Nav.Link>
                 {/* <Nav.Link href="#reviews" className={activeLink === 'reviews' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('Reviews')}>Reviews</Nav.Link> */}
 
-                <Nav.Link href="#experience" className={activeLink === 'experience' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('experience')}>Projects</Nav.Link>
+                <Nav.Link href="#projects" className={activeLink === 'experience' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('experience')}>Projects</Nav.Link>
                 <Nav.Link href="#view-posts" className={activeLink === 'view-posts' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('view-posts')}>Posts</Nav.Link>
                 <Nav.Link href="#connect" className={activeLink === 'contact-us' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('contact-us')}>ContactUs</Nav.Link>
-                <Nav.Link >
+                <Nav.Link href="">
                   <div className="cv-container">
                   < FaFileAlt className="cv-icon" size={50}/>
                   <div className="cv-text"> CV </div>
                   </div>
                 </Nav.Link>
                 <Nav.Link  className={activeLink === 'view-posts' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('gallery')}>
-
-
-
                 </Nav.Link>
                 {/* <Link to='/gallery' href="#gallery" className={activeLink === 'gallery' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('gallery')}>Gallery</Link> */}
                 <Nav.Link href="#user" className="nav-bar-user"> <User /></Nav.Link>
