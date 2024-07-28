@@ -2,15 +2,19 @@
 import React from 'react';
 import Gamesjson from './Gamesjson';
 
-import game1 from '../assets/img/myworks/games/default-game.jpg';
+import gameSnakeCard from '../assets/img/myworks/games/game-snake-card.jpg';
+import gameWarCard from '../assets/img/myworks/games/game-war-card.jpg';
+import gameDonutCard from '../assets/img/myworks/games/game-donut-card.jpg';
+import gameShootCard from '../assets/img/myworks/games/game-shoot-card.jpg';
+
 import defaultGames from '../assets/img/myworks/games/default-game.jpg';
 
 const Games = () => {
 const gamelist = {
-  "game1.jpg": game1,
-  "game2.jpg": game1,
-  "game3.jpg": game1,
-  "game4.jpg": game1,
+  "game-snake-card.jpg": gameSnakeCard,
+  "game-war-card.jpg": gameWarCard,
+  "game-donut-card.jpg": gameDonutCard,
+  "game-shoot-card.jpg": gameShootCard,
 }
 
 const getGames = (path) => {

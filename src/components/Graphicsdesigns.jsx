@@ -46,6 +46,7 @@ const Graphicsdesigns = () => {
         })
       }
       </div>
+      <hr />
     </>
   )
 }

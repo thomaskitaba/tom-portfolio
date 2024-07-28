@@ -5,7 +5,7 @@ const Gamesjson = [
     title: 'Tom Snake Game',
     technology: 'pycode',
     link: 'https://github.com/thomaskitaba',
-    imageUrl: 'default-game.jpg',
+    imageUrl: 'game-snake-card.jpg',
     description: `
       "mini snake game developed using android phone" `,
   },
@@ -15,7 +15,7 @@ const Gamesjson = [
     title: 'Tom Mini War',
     technology: 'pycode',
     link: 'https://youtu.be/zmIz9BZAAxk',
-    imageUrl: 'default-game.jpg',
+    imageUrl: 'game-war-card.jpg',
     description: `
       "mini war game developed using android phone" `,
   },
@@ -24,8 +24,8 @@ const Gamesjson = [
     className: 'donut-rain',
     title: 'Dounut Rain',
     technology: 'pycode',
-    link: 'https://scratch.mit.edu/projects/donuts',
-    imageUrl: 'default-game.jpg',
+    link: 'https://scratch.mit.edu/projects/720081593/',
+    imageUrl: 'game-donut-card.jpg',
     description: `
       "game developed using MIT's Scratch: for tutorial purpose" `,
   },
@@ -35,7 +35,7 @@ const Gamesjson = [
     title: 'Shooting Ghosts',
     technology: 'pycode',
     link: 'https://scratch.mit.edu/projects/646912570/',
-    imageUrl: 'default-game.jpg',
+    imageUrl: 'game-shoot-card.jpg',
     description: `
       "game developed using MIT's Scratch: for tutorial purpose" `,
   },
