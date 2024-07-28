@@ -3,7 +3,7 @@ import {Container, Row, Col} from "react-bootstrap";
 import {ArrowRightCircle} from "react-bootstrap-icons";
 import {useContext} from 'react';
 import MyContext from './MyContext';
-import headerImg from '../assets/img/websiteimages/self-photo.png';
+import headerImg from '../assets/img/websiteimages/self-photo-1.png';
 import { FaFileAlt } from 'react-icons/fa';
 // import headerImg from '../assets/img/websiteimages/books-1.png';
 // import wave from '../assets/img/wave.jpg';
