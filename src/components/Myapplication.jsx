@@ -1,33 +1,26 @@
+import Myapplicationjson from './Myapplicationjson';
 
-import React from 'react';
-import Gamesjson from './Gamesjson';
 import {Github, Youtube} from 'react-bootstrap-icons';
-import gameSnakeCard from '../assets/img/myworks/games/game-snake-card.jpg';
-import gameWarCard from '../assets/img/myworks/games/game-war-card.jpg';
-import gameDonutCard from '../assets/img/myworks/games/game-donut-card.jpg';
-import gameShootCard from '../assets/img/myworks/games/game-shoot-card.jpg';
+import applicationPaintCard from '../assets/img/myworks/applications/application-paint-card.jpg';
 
-import defaultGames from '../assets/img/myworks/games/default-game.jpg';
+import defaultApplication from '../assets/img/myworks/applications/default-application.jpg';
 
-const Games = () => {
-const gamelist = {
-  "game-snake-card.jpg": gameSnakeCard,
-  "game-war-card.jpg": gameWarCard,
-  "game-donut-card.jpg": gameDonutCard,
-  "game-shoot-card.jpg": gameShootCard,
+const Myapplication = () => {
+  const applicationlist = {
+    'application-paint-card.jpg': applicationPaintCard,
+    'default-application.jpg': defaultApplication,
 }
-
-const getGames = (path) => {
-  return gamelist[path] || null;
+const getApplications = (path) => {
+  return applicationlist[path] || null;
 
 }
 
 return (
   <div className= 'mywork-container'>
-    <div className="mywork-title">Games</div>
+    <div className="mywork-title">Applications</div>
     {
-      Gamesjson.map((images) => {
-        const ImageLink = getGames(images.imageUrl);
+      Myapplicationjson.map((images) => {
+        const ImageLink = getApplications(images.imageUrl);
         return (
           <div key={images.id} className="mywork-card">
             <a href={images.link} target="_blank" rel="noreferrer" className="mywork-images">
@@ -65,4 +58,5 @@ return (
   </div>
 )
 }
-export default Games;
+
+export default Myapplication;

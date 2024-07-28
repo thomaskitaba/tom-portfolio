@@ -4,7 +4,9 @@ const Gamesjson = [
     className: 'tom-snake',
     title: 'Tom Snake Game',
     technology: 'pycode',
-    link: 'https://github.com/thomaskitaba',
+    link: 'https://www.youtube.com/watch?v=2WV308gWHO8&lc=UgzQLjN-a9SJtxJDQS54AaABAg',
+    videoLink: 'https://www.youtube.com/watch?v=2WV308gWHO8&lc=UgzQLjN-a9SJtxJDQS54AaABAg',
+    githubLink: 'https://github.com/thomaskitaba/alx-snake.git',
     imageUrl: 'game-snake-card.jpg',
     description: `
       "mini snake game developed using android phone" `,
@@ -15,29 +17,32 @@ const Gamesjson = [
     title: 'Tom Mini War',
     technology: 'pycode',
     link: 'https://youtu.be/zmIz9BZAAxk',
+    videoLink: '',
     imageUrl: 'game-war-card.jpg',
+    videoLink: 'https://youtu.be/zmIz9BZAAxk',
+    githubLink: 'https://github.com/thomaskitaba',
     description: `
       "mini war game developed using android phone" `,
   },
   {
     id: 2,
     className: 'donut-rain',
-    title: 'Dounut Rain',
-    technology: 'pycode',
+    title: 'Collect Dounuts',
+    technology: 'Scratch',
     link: 'https://scratch.mit.edu/projects/720081593/',
     imageUrl: 'game-donut-card.jpg',
     description: `
-      "game developed using MIT's Scratch: for tutorial purpose" `,
+      "game developed to teach kids how to program. `,
   },
   {
     id: 3,
     className: 'shooting-ghosts',
     title: 'Shooting Ghosts',
-    technology: 'pycode',
+    technology: 'Scratch',
     link: 'https://scratch.mit.edu/projects/646912570/',
     imageUrl: 'game-shoot-card.jpg',
     description: `
-      "game developed using MIT's Scratch: for tutorial purpose" `,
+      "game developed to teach kids how to program." `,
   },
 ]
 

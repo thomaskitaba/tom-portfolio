@@ -22,7 +22,7 @@ import Myworks from './components/Myworks';
 import Websites from './components/Websites';
 import Graphicsdesigns from './components/Graphicsdesigns';
 import Games from './components/Games';
-
+import Myapplication from './components/Myapplication';
 import Texture from './components/Texture';
 import Busy from './components/Busy';
 import Keepalive from './components/Keepalive';
@@ -56,6 +56,8 @@ function App() {
         <Websites />
         <Graphicsdesigns />
         <Games />
+        <Myapplication />
+
         <Postsaccordion />
         <Contact />
         <Googlemap />
