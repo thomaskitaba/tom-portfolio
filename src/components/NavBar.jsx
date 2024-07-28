@@ -49,7 +49,12 @@ export const NavBar = () => {
                 <Nav.Link href="#experience" className={activeLink === 'experience' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('experience')}>Projects</Nav.Link>
                 <Nav.Link href="#view-posts" className={activeLink === 'view-posts' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('view-posts')}>Posts</Nav.Link>
                 <Nav.Link href="#connect" className={activeLink === 'contact-us' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('contact-us')}>ContactUs</Nav.Link>
-                <Nav.Link >  < FaFileAlt className="cv-icon" size={50}/></Nav.Link>
+                <Nav.Link >
+                  <div className="cv-container">
+                  < FaFileAlt className="cv-icon" size={50}/>
+                  <div className="cv-text"> CV </div>
+                  </div>
+                </Nav.Link>
                 <Nav.Link  className={activeLink === 'view-posts' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('gallery')}>
 
 

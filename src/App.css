@@ -1538,7 +1538,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   /* border: 1px solid red; */
 }
 .custom-mywork-card {
-  width: 100%;
+  width: 70%;
 }
 .mywork-card:hover{
   transform: scale(1.05);
@@ -1968,24 +1968,45 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   display: flex;
   perspective: 10px;
 }
+.cv-container {
+  position: relative;
+}
 .cv-icon {
- color: green;
- position: relative;
+ color: lightgreen;
+
+ /* position: relative; */
  /* box-shadow: 1px 1px 4px white; */
 }
-.cv-icon:hover {
-  color: lightgreen;
+
+.cv-container:hover {
+  color: var(--clr-bg-pastelpink);
   transform: scale(1.1);
+  animation: pop 1000ms linear;
+  /* filter: orange; */
 }
 
-.cv-icon::before {
-  content: 'CV';
+.cv-text {
   position: absolute;
-  color: white;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
+  top: 2%;
+  left: 12%;
+  font-size: 0.85rem;
+  color: darkblue;
+  font-weight: 800;
+  text-shadow: 1px 1px 2px white;
+  transition: 1000ms linear all;
+
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(3);
+  }
+  50% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 .save-2 {
   position: absolute;
