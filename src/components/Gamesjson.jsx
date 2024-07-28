@@ -29,6 +29,8 @@ const Gamesjson = [
     title: 'Collect Dounuts',
     technology: 'Scratch',
     link: 'https://scratch.mit.edu/projects/720081593/',
+    videoLink: '',
+    githubLink: '',
     imageUrl: 'game-donut-card.jpg',
     description: `
       "game developed to teach kids how to program. `,
@@ -39,6 +41,8 @@ const Gamesjson = [
     title: 'Shooting Ghosts',
     technology: 'Scratch',
     link: 'https://scratch.mit.edu/projects/646912570/',
+    videoLink: '',
+    githubLink: '',
     imageUrl: 'game-shoot-card.jpg',
     description: `
       "game developed to teach kids how to program." `,

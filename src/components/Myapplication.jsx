@@ -16,13 +16,14 @@ const getApplications = (path) => {
 }
 
 return (
-  <div className= 'mywork-container'>
+  <div className= 'mywork-container '>
     <div className="mywork-title">Applications</div>
+    <div className="custom-mywork-container">
     {
       Myapplicationjson.map((images) => {
         const ImageLink = getApplications(images.imageUrl);
         return (
-          <div key={images.id} className="mywork-card">
+          <div key={images.id} className="mywork-card custom-mywork-card">
             <a href={images.link} target="_blank" rel="noreferrer" className="mywork-images">
             {ImageLink ? (
               <img src={ImageLink} alt={images.title} className="website-images" />
@@ -34,16 +35,16 @@ return (
               <div className='work-title'>{images.title}</div>
               <div className='work-title'>({images.technology})</div>
               <div className='my-work-icons'>
-                {images.githubLink &&
+                {(images.githubLink != null && images.githubLink != '') &&
                 <span >
-                  <a href={images.githubLink} alt={`'vido link for '${images.title}`} link>
+                  <a href={images.githubLink} alt={`'video link for '${images.title}`} link>
                     <Github className="github-icon"/>
                   </a>
                 </span>
                 }
-                {images.videoLink &&
+                {(images.videoLink != null && images.videoLink != '') &&
                 <span >
-                  <a href={images.videoLink} alt={`'vido link for '${images.title}`} link>
+                  <a href={images.videoLink} alt={`'video link for '${images.title}`} link>
                     <Youtube className="youtube-icon"/>
                   </a>
                 </span>
@@ -55,6 +56,7 @@ return (
         )
       })
     }
+    </div>
   </div>
 )
 }

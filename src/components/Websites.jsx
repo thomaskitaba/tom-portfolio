@@ -51,7 +51,7 @@ const Websites = () => {
         );
       })}
       </div>
-      <hr style={{ color: 'white'}}></hr>
+      <hr></hr>
     </>
   );
 };
