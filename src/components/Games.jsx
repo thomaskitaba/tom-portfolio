@@ -23,6 +23,7 @@ const getGames = (path) => {
 }
 
 return (
+  <>
   <div className= 'mywork-container'>
     <div className="mywork-title">Games</div>
     {
@@ -63,6 +64,8 @@ return (
       })
     }
   </div>
+  <hr />
+  </>
 )
 }
 export default Games;
