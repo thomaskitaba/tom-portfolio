@@ -1052,10 +1052,12 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   margin-bottom: 16px;
   display: inline-block;
   color: var(--clr-txt-verywhite);
+  z-index: 3;
 }
 .banner-moto-discription{
   color: car(--clr-txt-verywhite);
   padding-bottom: 0px;
+
 }
 .thomas-kitaba {
   font-size: 7rem;
@@ -1080,6 +1082,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   background-position: center;
   width: 100%;
   color: black;
+
 }
 .banner-moto {
   margin: 20px;
@@ -1181,7 +1184,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   margin-left: 25px;
 }
 .banner img {
-  animation: updown 20s linear infinite;
+  border-bottom: 10px green solid;
+  margin-bottom: 20px;
+  /* animation: updown 20s linear infinite; */
 }
 @keyframes updown {
     0% {
@@ -1579,13 +1584,21 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 .work-title {
   font-size: 1rem;
-  align-self: flex-start;
+
+  text-align: left;
   color: green;
   padding-left: 10px;
+  width: 100%;
+  /* text-shadow: 1px 1px 2px rgb(34, 28, 28); */
 }
-
-.word-title :nth-child(1) {
+.underline {
   text-decoration: underline;
+}
+.thin-hr {
+
+  width: 100%;
+  padding: 0px;
+  border: 1px green solid;
 }
 
 .my-work-icons {
@@ -1950,7 +1963,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   background-color: #4e8bff; /* Fallback color */
   background-image: linear-gradient(to bottom, #4e8bff, #2563eb);
   color: white;
-  box-shadow: 2px 2px 4px rgba(39, 39, 39, 0.5), -2px -2px 4px rgba(39, 39, 39, 0.5);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
@@ -1963,18 +1976,18 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   margin: 0 auto;
   margin-bottom: 10px;
   align-self: center;
+border-radius: 20px;
+z-index: 9999;
 }
 
 .subscribe-button:hover {
   background-color: White;
-  background-image: linear-gradient(to bottom, #2563eb, #4e8bff);
-  box-shadow: 3px 4px 8px rgba(0, 0, 255, 0.7), -3px -2px 4px rgba(0, 0, 255, 0.7);
+  z-index: 9999;
+  transform: scale(1.1);
+  box-shadow: rgba(0, 0, 255, 0.25) 0px 54px 55px, rgba(0, 0, 255, 0.12) 0px -12px 30px, rgba(0, 0, 255, 0.12) 0px 4px 6px, rgba(0, 0, 255, 0.17) 0px 12px 13px, rgba(0, 0, 255, 0.09) 0px -3px 5px;
   /* filter: drop-shadow(-0.2rem -0.2rem 0.5rem rgba(236, 181, 78, 1)); */
 }
-.subsicribe-cv-container {
-  display: flex;
-  perspective: 10px;
-}
+
 .cv-container {
   position: relative;
 }

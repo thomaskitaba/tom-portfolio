@@ -42,16 +42,20 @@ const Websites = () => {
               </a>
               {/* </div> */}
               <div className="work-detail-container">
-                <div className='work-title'>{website.title}</div>
+                <div className='work-title underline'>{website.title}</div>
                 <div className='work-title'>({website.technology} )</div>
+                <div className='work-title '>
+                  <a href={website.link} alt="link to Tom Restrant" target="_blank" rel="noreferrer">View website</a>
+                </div>
+                <hr className="thin-hr"/>
                 <div className='work-description'>{website.description}</div>
+
               </div>
             </div>
-
         );
       })}
       </div>
-      <hr></hr>
+      {/* <hr></hr> */}
     </>
   );
 };

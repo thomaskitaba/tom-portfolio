@@ -18,10 +18,8 @@ const Graphicsdesigns = () => {
   const getGraphics = (path) => {
     return graphics[path] || null;
   }
-
   return (
     <>
-
       <div className= 'mywork-container'>
       <div className="mywork-title">Graphics Design</div>
       {
@@ -37,8 +35,19 @@ const Graphicsdesigns = () => {
               )}
               </a>
               <div className="work-detail-container">
-                <div className='work-title'>{images.title}</div>
+                <div className='work-title underline'>{images.title}</div>
                 <div className='work-title'>({images.technology})</div>
+                <div className='work-title'>
+                {
+                  images.link &&
+                  <span >
+                    <a href={images.link} alt={`'imgur link for '${images.title}`} target="_blank" rel="noreferrer">
+                      <span > View game </span>
+                    </a>
+                  </span>
+                }
+              </div>
+              <hr className='thin-hr'/>
                 <div className='work-description'>{images.description}</div>
               </div>
             </div>
@@ -46,7 +55,7 @@ const Graphicsdesigns = () => {
         })
       }
       </div>
-      <hr />
+      {/* <hr /> */}
     </>
   )
 }
