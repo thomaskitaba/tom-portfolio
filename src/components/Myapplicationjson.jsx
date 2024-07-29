@@ -7,7 +7,7 @@ const Myapplicationjson = [
     technology: 'Pycode, pygame module  ',
     link: 'https://github.com/thomaskitaba/',
     videoLink: '',
-    githubLink: '',
+    githubLink: 'https://github.com/thomaskitaba/tom-paint.git',
     imageUrl: 'application-paint-card.jpg',
     description: `
       "Paint app, which can be used to create screensavers and other artistic content."`,

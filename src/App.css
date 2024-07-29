@@ -1583,19 +1583,18 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   /* box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset; */
 }
 .work-title {
-  font-size: 1rem;
-
+  font-size: 0.75rem;
   text-align: left;
   color: green;
   padding-left: 10px;
   width: 100%;
-  /* text-shadow: 1px 1px 2px rgb(34, 28, 28); */
+  line-height: 1.25;
+
 }
 .underline {
   text-decoration: underline;
 }
 .thin-hr {
-
   width: 100%;
   padding: 0px;
   border: 1px green solid;
@@ -1607,13 +1606,18 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   gap: 10px;
   padding-left: 10px;
 }
+.github-icon, .youtube-icon {
+  padding-top: 5px;
+}
 .github-icon {
   color: black;
+
 }
 .youtube-icon {
   color: red;
 }
 .work-description {
+
   font-size: 1rem;
 }
 
@@ -1634,7 +1638,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     width: 100%;
     justify-content: center;
   }
-
   .mywork-card {
     width: 80%;
     /* display: flex; */
@@ -1647,9 +1650,11 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   .website-images {
     width: 100%;
     gap: 10px;
-
   }
-
+  .work-title {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
   .custom-mywork-card {
     width: 50%;
   }

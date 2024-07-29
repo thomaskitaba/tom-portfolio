@@ -2,8 +2,8 @@ const Graphicsdesignsjson = [
   {
     id: 0,
     className: 'final-farewell',
-    title: 'Finarl Farewell',
-    technology: 'Adobe Photoshop',
+    title: 'Final Farewell',
+    technology: 'Photoshop',
     link: 'https://imgur.com/ArmyWPC',
     imageUrl: 'final-farewell-card.jpg',
     description: `
@@ -14,7 +14,7 @@ const Graphicsdesignsjson = [
     id: 1,
     className: 'ethiopian-women',
     title: 'Face of Ethiopia',
-    technology: 'Adobe Photoshop',
+    technology: 'Photoshop',
     link: 'https://imgur.com/xpo5jDK',
     imageUrl: 'ethiopia-face-card.jpg',
     description: `
@@ -25,7 +25,7 @@ const Graphicsdesignsjson = [
     id: 2,
     className: 'ship-tana',
     title: 'Ship of Tana',
-    technology: 'Adobe Photoshop',
+    technology: 'Photoshop',
     link: 'https://imgur.com/JHkqqdU',
     imageUrl: 'ship-of-tana-card.jpg',
     description: `
@@ -36,7 +36,7 @@ const Graphicsdesignsjson = [
     id: 3,
     className: 'robot-patriot',
     title: 'Robot Patriot',
-    technology: 'Adobe Photoshop',
+    technology: 'Photoshop',
     link: 'https://imgur.com/4VGRRSe',
     imageUrl: 'robot-patriot-card.jpg',
     description: `

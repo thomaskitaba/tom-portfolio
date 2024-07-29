@@ -37,19 +37,28 @@ return (
               <div className='my-work-icons'>
                 {(images.githubLink != null && images.githubLink != '') &&
                 <span >
-                  <a href={images.githubLink} alt={`'video link for '${images.title}`} link>
-                    <Github className="github-icon"/>
+                  <a href={images.githubLink} alt={`'vido link for '${images.title}`} target="_blank" rel="noreferrer">
+                    <Github className="github-icon" size={25}/>
                   </a>
                 </span>
                 }
                 {(images.videoLink != null && images.videoLink != '') &&
                 <span >
-                  <a href={images.videoLink} alt={`'video link for '${images.title}`} link>
-                    <Youtube className="youtube-icon"/>
+                  <a href={images.videoLink} alt={`'vido link for '${images.title}`} target="_blank" rel="noreferrer">
+                    <Youtube className="youtube-icon" size={25}/>
+                  </a>
+                </span>
+                }
+                {
+                  images.play &&
+                  <span >
+                  <a href={images.play} alt={`'play link for ${images.play}`} target="_blank" rel="noreferrer">
+                    <span className="play-icon">Play Game</span>
                   </a>
                 </span>
                 }
               </div>
+              <hr className="thin-hr" />
               <div className='work-description'>{images.description}</div>
             </div>
           </div>
