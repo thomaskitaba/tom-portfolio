@@ -1072,8 +1072,7 @@ const resetButtons = () => {
        <div className="accordion accordion-flush half-width" id="accordionFlush-post">
 
         {database.record.posts.map((post, postIndex) => (
-          // {let tempStatus = '';}
-          // userTypeId === 1 ? setTempStatus("post.postStatus") : setTempStatus("post.postStatus = 'active'")
+
           eval(tempStatus) && (
           <div className="accordion-item">
           <h2 className="accordion-header">

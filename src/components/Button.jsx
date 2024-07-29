@@ -11,12 +11,15 @@ const Button = () => {
   const [scrolled, setScrolled] = useState(false);
   const [reachedEnd, setReachedEnd] = useState(true);
   const [showNotification, setShowNotification] = useState(false);
+  const [showScrollMore, setShowScrollMore] = useState(true);
   useEffect(() => {
     const onScroll = () => {
       if (window.scrollY > 800) {
         setScrolled(true);
+        setShowScrollMore(false);
       } else {
         setScrolled(false);
+        setShowScrollMore(true);
       }
       if (window.scrollY < document.documentElement.scrollHeight - 1500) {
         setReachedEnd(true);
@@ -31,7 +34,6 @@ const Button = () => {
     window.addEventListener('scroll', onScroll);
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
-
 
   const scrollToTop = () => {
     window.scrollTo({
@@ -59,6 +61,11 @@ const Button = () => {
   }
   return (
     <>
+    <div className="show-more-container">
+    {
+      showScrollMore && <ChevronDown className="show-scroll-more"/>
+    }
+    </div>
     { (showNotification && database ) &&
     <div className="bell-info-container info-bg-yellow">
       <div className="bell-info">
