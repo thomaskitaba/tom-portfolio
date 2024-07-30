@@ -1532,7 +1532,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   text-shadow: 1px 1px 2px rgb(34, 28, 28);
 }
 .mywork-card {
-  width: 180px;
+  width: 170px;
   height: auto;
   display: flex;
   /* flex: 2; */
