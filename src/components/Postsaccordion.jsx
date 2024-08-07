@@ -9,7 +9,7 @@ import {checkEmail, checkTextExist, checkPhone} from './UtilityFunctions';
 import  UserManagment from './UserManagment';
 import Busy from './Busy';
 
-export const Postsaccordion = (props) => {
+export const Posts = (props) => {
 
   // get global contexts
   const { userId, setUserId } = useContext(MyContext);

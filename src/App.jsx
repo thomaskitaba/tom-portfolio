@@ -7,7 +7,7 @@ import { Notification } from './components/Notification';
 
 import BackgroundImage from './components/BackgroundImage';
 import ErrorBoundary from './components/ErrorBoundary';
-import { Postsaccordion } from './components/Postsaccordion';
+import { Posts } from './components/Postsaccordion';
 import Services  from './components/Services';
 import { Consultancy } from './components/Consultancy';
 import Footer  from './components/Footer';
@@ -18,6 +18,7 @@ import Button from './components/Button';
 import Slider from './components/Slider';
 import SliderJson from './components/SliderJson';
 import Myworks from './components/Myworks';
+import Heropage from './components/Heropage'
 
 import Websites from './components/Websites';
 import Graphicsdesigns from './components/Graphicsdesigns';
@@ -50,6 +51,7 @@ function App() {
         <Keepalive />
         <Button />
         <Banner />
+        {/* <Heropage /> */}
         {/* <Services/> */}
         <Slider SliderJson={SliderJson} />
         {/* <Myworks /> */}
@@ -58,7 +60,7 @@ function App() {
         <Games />
         <Myapplication />
 
-        <Postsaccordion />
+        <Posts />
         <Contact />
         <Googlemap />
         <Subscribe />
