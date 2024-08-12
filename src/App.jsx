@@ -51,7 +51,7 @@ function App() {
         <Keepalive />
         <Button />
         <Banner />
-        {/* <Heropage /> */}
+        <Heropage />
         {/* <Services/> */}
         <Slider SliderJson={SliderJson} />
         {/* <Myworks /> */}
@@ -59,7 +59,6 @@ function App() {
         <Graphicsdesigns />
         <Games />
         <Myapplication />
-
         <Posts />
         <Contact />
         <Googlemap />

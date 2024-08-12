@@ -1057,7 +1057,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .banner-moto-discription{
   color: car(--clr-txt-verywhite);
   padding-bottom: 0px;
-
 }
 .thomas-kitaba {
   font-size: clamp(3rem, 8vw, 7rem);
@@ -1078,7 +1077,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   background-position: center;
   width: 100%;
   color: black;
-
 }
 .banner-moto {
   margin: 20px;

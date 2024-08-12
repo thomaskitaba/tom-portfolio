@@ -5,3 +5,4 @@ export default function Heropage() {
     <Spline scene="https://prod.spline.design/nVKihJU6aSA-z5Pm/scene.splinecode" />
   );
 }
+

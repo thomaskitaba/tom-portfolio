@@ -49,7 +49,7 @@ export const NavBar = () => {
                 <Nav.Link href="#projects" className={activeLink === 'experience' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('experience')}>Projects</Nav.Link>
                 <Nav.Link href="#view-posts" className={activeLink === 'view-posts' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('view-posts')}>Posts</Nav.Link>
                 <Nav.Link href="#connect" className={activeLink === 'contact-us' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('contact-us')}>ContactUs</Nav.Link>
-                <Nav.Link href="https://drive.google.com/file/d/1533iCb6fwmQ_vW3blNhftNxzAUfKz2Uk/view?usp=drive_link" target="_blank" rel="noreferrer">
+                <Nav.Link href="https://drive.google.com/file/d/1eedfH-kAUCkGeH_1py1kgviHqo1AarSZ/view?usp=drive_link" target="_blank" rel="noreferrer">
                   <div className="cv-container">
                   < FaFileAlt className="cv-icon" size={50}/>
                   <div className="cv-text"> CV </div>
