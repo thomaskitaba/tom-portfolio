@@ -65,7 +65,6 @@ export const NavBar = () => {
         </Navbar>
         </div>
 
-
     </>
   )
 }
