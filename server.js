@@ -83,7 +83,6 @@ const db = new sqlite3.Database(myDatabase, sqlite3.OPEN_READWRITE, (err) => {
 
 // TODO: EMAIL related:  Configure the mail client
 
-
 const expiresIn = '1h';
   let configEmail = {
       service : 'gmail',
@@ -164,7 +163,7 @@ const time = new Date().toISOString().slice(11, 19);
 const datetime = `${date} ${time}`;
 return datetime;
 }
-//---------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------
 const runAllQuery = (sql, params) => {
 return new Promise((resolve, reject) => {
   db.all(sql, params, (err, rows) => {
