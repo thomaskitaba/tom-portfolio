@@ -24,12 +24,13 @@ import Websites from './components/Websites';
 import Graphicsdesigns from './components/Graphicsdesigns';
 import Games from './components/Games';
 import Myapplication from './components/Myapplication';
-import Texture from './components/Texture';
+// import Texture from './components/Texture';
 import Busy from './components/Busy';
 import Keepalive from './components/Keepalive';
-import generateTextFromGPT from './components/generateTextFromGPT';
+
 // import MailchimpForm from './components/MailchimpForm';
 import Subscribe from './components/Subscribe';
+import Gemini from './components/Gemini';
 // Import Google Analytics functions
 // import { initGA, PageView } from './components/GoogleAnalytics';
 import React, { useState, useEffect } from 'react';
@@ -50,10 +51,12 @@ function App() {
         <NavBar />
         <Keepalive />
         <Button />
+        
         <Banner />
         <Heropage />
         {/* <Services/> */}
         <Slider SliderJson={SliderJson} />
+        <Gemini />
         {/* <Myworks /> */}
         <Websites />
         <Graphicsdesigns />

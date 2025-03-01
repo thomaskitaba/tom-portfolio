@@ -22,6 +22,7 @@ const apikey = process.env.VITE_API_KEY;
 const secretKey = process.env.VITE_SECRETKEY;
 const mailchimpApiKey = process.env.VITE_MAILCHIMP_API;
 const listId = process.env.VITE_MAILCHIMP_LAST_ID;
+const gemini_api= process.env.VITE_GEMINI_KEY;
 const { AsyncLocalStorage } = require('async_hooks');
 
 
@@ -61,7 +62,13 @@ let allPostCommentsJson = [];
 let activeMetadataViewJson = [];
 let activeUsersViewJson = [];
 
-
+// Check for API key on server startup
+if (!process.env.VITE_GEMINI_KEY) {
+  console.error('FATAL ERROR: GEMINI_API_KEY not found in environment');
+  process.exit(1);
+} else {
+  console.log(gemini_api)
+}
 // Authentication middleware
 
 const authenticate = (req, res, next) => {
@@ -123,7 +130,6 @@ const expiresIn = '1h';
 });
 
 // todo   jwt   signner
-
 // const expiresIn = '1h';
 const signEmail = async (id) => {
   console.log("about to create token");
@@ -163,6 +169,7 @@ const time = new Date().toISOString().slice(11, 19);
 const datetime = `${date} ${time}`;
 return datetime;
 }
+
 //-------------------------------------------------------------------------------------------------
 const runAllQuery = (sql, params) => {
 return new Promise((resolve, reject) => {
@@ -193,8 +200,6 @@ return new promiseHooks((resolve, reject) => {
 // ---- 2.   /api/login  :- login
 // ---- 3.   /signup     :- signup
 
-
-
 const allPostsFunction = () => {
   return new Promise((resolve, reject) => {
     db.all(allPostsSql, (err, rows) => {
@@ -209,7 +214,6 @@ const allPostsFunction = () => {
 };
 
 // function to get all post comments
-
 
 const activePostsCommentsViewFunction = () => {
   return new Promise((resolve, reject) => {
@@ -1794,6 +1798,64 @@ app.post('/api/comment/info', async (req, res) => {
   }
   });
 
+
+// TODO: use deepseek to format content of the post to html format
+app.post('/api/ask-gemini', async (req, res) => {
+  try {
+    // Validate environment variable
+    if (!gemini_api) {
+      console.error('Missing Gemini API Key');
+      return res.status(500).json({ error: 'Server configuration error' });
+    }
+
+    // Validate request body
+    const { prompt } = req.body;
+    if (!prompt || typeof prompt !== 'string') {
+      return res.status(400).json({ error: 'Invalid prompt format' });
+    }
+
+    // Gemini API call with timeout
+    const response = await axios.post(
+      `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${gemini_api}`,
+      {
+        contents: [{
+          parts: [{ text: prompt }]
+        }]
+      },
+      {
+        headers: { 'Content-Type': 'application/json' },
+        timeout: 10000 // 10-second timeout
+      }
+    );
+
+    // Safe response handling
+    const responseText = response.data?.candidates?.[0]?.content?.parts?.[0]?.text;
+    if (!responseText) {
+      console.error('Unexpected API response structure:', response.data);
+      return res.status(502).json({ error: 'Invalid API response format' });
+    }
+
+    res.json({ response: responseText });
+
+  } catch (error) {
+    console.error('API Error:', {
+      message: error.message,
+      code: error.code,
+      response: error.response?.data,
+      stack: error.stack
+    });
+
+    const statusCode = error.response?.status || 500;
+    const errorMessage = error.response?.data?.error?.message 
+      || 'Failed to process request';
+
+    res.status(statusCode).json({ 
+      error: errorMessage,
+      details: error.response?.data?.error?.details
+    });
+  }
+});
+
 // Start the server
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
@@ -1806,5 +1868,8 @@ app.listen(port, () => {
 
 
 
-
 // TODO: ==== Code Recycle bin=====
+
+// curl -X POST "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=AIzaSyBxhmDh6SgOJgQDHK3VSFX0ICasE-VbMWQ" \
+// -H "Content-Type: application/json" \
+// -d '{"contents":[{"parts":[{"text":"Hello"}]}]}'
