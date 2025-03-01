@@ -1870,6 +1870,3 @@ app.listen(port, () => {
 
 // TODO: ==== Code Recycle bin=====
 
-// curl -X POST "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=AIzaSyBxhmDh6SgOJgQDHK3VSFX0ICasE-VbMWQ" \
-// -H "Content-Type: application/json" \
-// -d '{"contents":[{"parts":[{"text":"Hello"}]}]}'
