@@ -62,13 +62,7 @@ let allPostCommentsJson = [];
 let activeMetadataViewJson = [];
 let activeUsersViewJson = [];
 
-// Check for API key on server startup
-if (!process.env.VITE_GEMINI_KEY) {
-  console.error('FATAL ERROR: GEMINI_API_KEY not found in environment');
-  process.exit(1);
-} else {
-  console.log(gemini_api)
-}
+
 // Authentication middleware
 
 const authenticate = (req, res, next) => {
@@ -1658,118 +1652,6 @@ const handelCommentInfo = async (data) => {
 
 }
 
-// const handelCommentInfotemp = async (data) => {
-//   const [id, userId, userTypeId, value] = data;
-//   console.log(`inside function ${value}`); // todo: test
-
-//   return new Promise((resolve, reject) => {
-//     let likedOrDislikedValue = '';
-//     let updateCommentsTable = '';
-//     let updateCommentsTableCase2 = '';
-//     let updateCommentInfoExistSql = '';
-//     let commentInfoParam = [];
-//     let thumbsDirection = 'up';
-
-//     const checkCommentInfoExistSql = 'SELECT * FROM userCommentInfo WHERE commentId LIKE ? AND userId LIKE ?';
-//     const insertIntoCommentInfoSql = 'INSERT INTO userCommentInfo (commentId, userId, liked, disliked) VALUES (?, ?, ?, ?, ?)';
-//     const insertIntoCommentInfoSqlCase2 = 'UPDATE userPostInfo SET liked = CASE WHEN liked = 1 THEN 0 ELSE 1 END WHERE userPostInfoId = ?';
-
-//     if (value === 'comment-like' || value === 'reply-like') {
-//       console.log('inside Comment like'); // todo: test
-
-//       commentInfoParam.length = 0;
-//       commentInfoParam.push(id, userId, true, false);
-
-//       updateCommentsTable = 'UPDATE comments SET likes = likes + 1, thumbDirection = ? WHERE commentId = ?';
-//       updateCommentInfoExistSql = 'UPDATE userCommentInfo SET liked = CASE WHEN liked = 1 THEN 0 ELSE 1 END WHERE userCommentInfoId = ?';
-//       thumbsDirection = 'up';
-//     } else if (value === 'comment-dislike' || value === 'reply-dislike') {
-//       console.log('inside Comment dislike'); // todo: test
-
-//       commentInfoParam.length = 0;
-//       commentInfoParam.push(id, userId, false, true);
-
-//       updateCommentsTable = 'UPDATE comments SET disLikes = disLikes + 1, thumbDirectionDislike = ? WHERE commentId = ?';
-//       updateCommentInfoExistSql = 'UPDATE userCommentInfo SET disliked = CASE WHEN disliked = 1 THEN 0 ELSE 1 END WHERE userCommentInfoId = ?';
-//       thumbsDirection = 'down';
-//     } else {
-//       resolve({ error: 'unknown operation' });
-//       return;
-//     }
-
-//     db.run('BEGIN');
-//     db.all(checkCommentInfoExistSql, [id, userId], (err, rows) => {
-//       console.log("checking if user has already liked the comment or reply");
-//       if (err) {
-//         db.run('ROLLBACK');
-//         reject({ error: 'Database Error' });
-//         return;
-//       }
-
-//       if (rows.length === 0) {
-//         console.log(`you are about to like this comment ${id}  ${userId}`);
-//         db.run(insertIntoCommentInfoSql, commentInfoParam, function(err) {
-//           if (err) {
-//             console.log('error inserting to userCommentInfo');
-//             db.run('ROLLBACK');
-//             reject({ error: 'Database Error' });
-//             return;
-//           }
-//           console.log("about to insert to comments");
-//           if (this.changes === 0) {
-//             console.log('error inserting to userCommentInfo');
-//             db.run('ROLLBACK');
-//             reject({ error: 'Comment not found or user does not have permission to insert' });
-//             return;
-//           }
-//           db.run(updateCommentsTable, [thumbsDirection, id], function(err) {
-//             if (err) {
-//               console.log('error updating comment likes');
-//               db.run('ROLLBACK');
-//               reject({ error: 'Database Error' });
-//               return;
-//             }
-//             console.log('successfully updated Comment likes');
-//             const updatedLikes =  updatedLikedAmount(id, 'comments');
-//             db.run('COMMIT');
-//             resolve(updatedLikes);
-//           })
-//         });
-//       } else {
-//         likedOrDislikedValue = rows[0].liked;
-//         userCommentInfoId = rows[0].userCommentInfoId;
-
-//         console.log(`userCommentInfoId: ${userCommentInfoId}, likedValue ${likedOrDislikedValue}`);
-//         console.log('TAKE away your likes to the post');
-
-//         db.run(updateCommentInfoExistSql, [userCommentInfoId], function(err) {
-//           if (err) {
-//             console.log('Error updating userCommentInfo');
-//             db.run('ROLLBACK');
-//             reject({ error: 'Database Error' });
-//             return;
-//           }
-//           console.log("about to insert to Comment");
-//           const count = likedOrDislikedValue === 1 ? -1 : 1;
-//           const newThumbDirection = count === 1 ? 'down' : 'up';
-
-//           db.run(updateCommentsTableCase2, [count, newThumbDirection, id], function(err) {
-//             if (err) {
-//               console.log('error updating comment likes');
-//               db.run('ROLLBACK');
-//               reject({ error: 'Database Error' });
-//               return;
-//             }
-//             console.log('successfully updated Comment likes');
-//             const updatedLikes =  updatedLikedAmount(id, 'comments');
-//             db.run('COMMIT');
-//             resolve(updatedLikes);
-//           })
-//         });
-//       }
-//     });
-//   });
-// };
 
 //todo: endpoint  /api/comment/info
 app.post('/api/comment/test', async (req, res) => {
@@ -1797,7 +1679,6 @@ app.post('/api/comment/info', async (req, res) => {
     }
   }
   });
-
 
 // TODO: use deepseek to format content of the post to html format
 app.post('/api/ask-gemini', async (req, res) => {
@@ -1860,13 +1741,6 @@ app.post('/api/ask-gemini', async (req, res) => {
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
-
-
-
-
-
-
-
 
 // TODO: ==== Code Recycle bin=====
 
